@@ -5,8 +5,10 @@ import Services from './components/Services'
 import About from './components/About'
 import Pricing from './components/Pricing'
 import Gallery from './components/Gallery'
+import AIAdvisor from './components/AIAdvisor'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import './AIAdvisor.css'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -24,17 +26,21 @@ function App() {
   return (
     <>
       <Navbar scrolled={scrolled} />
-      <h1 className='text-red-500 text-3xl'>asldfhasdf</h1>
       <Hero />
       <Services />
       <About />
       <Pricing />
       <Gallery />
+      <AIAdvisor />
       <Contact />
       <Footer />
-      
-      <div className={`back-to-top ${showTop ? 'visible' : ''}`} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-        <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+
+      <div
+        className={`back-to-top ${showTop ? 'visible' : ''}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        title="Back to top"
+      >
+        <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15" /></svg>
       </div>
     </>
   )
